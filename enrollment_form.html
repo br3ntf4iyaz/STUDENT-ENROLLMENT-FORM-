@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1, h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form .checkbox-group, form .radio-group {
+            margin-bottom: 15px;
+        }
+
+        form .checkbox-group label, form .radio-group label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background: #fff;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <h1>Student Enrollment Form</h1>
+
+    <!-- Instructions -->
+    <h3>Instructions:</h3>
+    <ol>
+        <li>Fill in the form fields.</li>
+        <li>Check your interests.</li>
+        <li>Click "Enroll Now" to submit.</li>
+    </ol>
+
+    <!-- Enrollment Form -->
+    <form action="#" method="POST">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+        <div class="radio-group">
+            <label>Sex:</label>
+            <label><input type="radio" name="sex" value="Male" required> Male</label>
+            <label><input type="radio" name="sex" value="Female"> Female</label>
+        </div>
+
+        <label for="course">Course Options:</label>
+        <select id="course" name="course" required>
+            <option value="">-- Select a Course --</option>
+            <option value="BSIT">BSIT</option>
+            <option value="BSSW">BSSW</option>
+            <option value="BSPA">BSPA</option>
+        </select>
+
+        <div class="checkbox-group">
+            <label>Interests:</label>
+            <label><input type="checkbox" name="interests" value="Web Development"> Web Development</label>
+            <label><input type="checkbox" name="interests" value="Data Science"> Data Science</label>
+            <label><input type="checkbox" name="interests" value="Networking"> Networking</label>
+            <label><input type="checkbox" name="interests" value="Graphic Design"> Graphic Design</label>
+        </div>
+
+        <button type="submit">Enroll Now</button>
+    </form>
+
+    <!-- Student Data Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Course</th>
+                <th>Interests</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John Nieva</td>
+                <td>JPNieva@example.com</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>BSIT</td>
+                <td>Web Development, Networking</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Andrew Oareza</td>
+                <td>andrewoareza@example.com</td>
+                <td>22</td>
+                <td>Male</td>
+                <td>BSSW</td>
+                <td>Data Science, Graphic Design</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</body>
+</html>
